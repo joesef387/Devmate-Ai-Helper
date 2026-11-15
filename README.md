@@ -62,3 +62,5 @@ The `dist` folder is the production frontend build. GitHub Pages hosts the front
 The GitHub Actions workflow deploys the site automatically whenever changes are pushed to `main`. Enable **Settings → Pages → Build and deployment → Source: GitHub Actions** in the repository. After the workflow succeeds, the site will be available at:
 
 https://joesef387.github.io/Devmate-Ai-Helper/
+
+If a deployment ran before enabling GitHub Pages, open the repository's **Actions** tab, select **Deploy to GitHub Pages**, and re-run the latest workflow.
