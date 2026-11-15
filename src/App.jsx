@@ -65,6 +65,29 @@ function Workspace() {
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState("");
 
+  function createDemoAnswer(task, skillLevel) {
+    return `## Suggested approach for "${task}"
+
+### Start with the structure
+- Break the interface into a few reusable React components.
+- Define the state and content each component needs.
+- Keep the markup semantic and easy to scan.
+
+### Build the UI in layers
+1. Add the layout and component structure.
+2. Add responsive styles, spacing, and typography.
+3. Add hover and keyboard-focus states.
+
+### Polish and test
+- Check the result at mobile and desktop widths.
+- Review color contrast and keyboard navigation.
+- Include loading, empty, and error states where helpful.
+
+**Skill level:** ${skillLevel}
+
+Demo mode is active. Connect a backend API to enable live AI answers.`;
+  }
+
   function formatAnswer(rawText) {
     if (!rawText) return [];
 
@@ -101,7 +124,14 @@ function Workspace() {
     if (!prompt.trim()) return;
     setLoading(true); setError(""); setAnswer(""); setMode("");
     try {
-      const response = await fetch("/api/generate", {
+      const apiUrl = import.meta.env.VITE_API_URL;
+      if (import.meta.env.PROD && !apiUrl) {
+        setAnswer(createDemoAnswer(prompt, level));
+        setMode("demo");
+        return;
+      }
+
+      const response = await fetch(`${apiUrl || ""}/api/generate`, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt, skillLevel: level })
       });
