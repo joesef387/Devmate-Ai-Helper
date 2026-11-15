@@ -55,7 +55,7 @@ Without a key, DevMate runs in demo mode and the rest of the app remains functio
 ```bash
 npm run build
 ```
-The `dist` folder is the production frontend build. GitHub Pages hosts the frontend in demo mode. For live AI responses, deploy the Express API to a Node-compatible host and set `VITE_API_URL` to that API's base URL when building the frontend. Never expose the OpenAI API key in frontend code.
+The `dist` folder is the production frontend build. GitHub Pages hosts the frontend in demo mode, so the prompt form remains usable without an API server. For live AI responses, deploy the Express API to a Node-compatible host and set `VITE_API_URL` to that API's base URL when building the frontend. Never expose the OpenAI API key in frontend code.
 
 ## Deploy to GitHub Pages
 
