@@ -1,4 +1,4 @@
-# DevMate — AI Frontend Helper
+# PrimeMate — AI Frontend Helper
 
 A polished React project for the Mini AI Frontend Helper assignment.
 
@@ -48,7 +48,7 @@ A polished React project for the Mini AI Frontend Helper assignment.
 
 Never commit `.env` or expose your API key in frontend JavaScript.
 
-Without a key, DevMate runs in demo mode and the rest of the app remains functional.
+Without a key, PrimeMate runs in demo mode and the rest of the app remains functional.
 
 ## Production build
 

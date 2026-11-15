@@ -10,14 +10,14 @@ const suggestions = [
 function Navbar() {
   const [open, setOpen] = useState(false);
   return <header className="navbar">
-    <a className="brand" href="#"><span className="brand-mark"><Sparkles size={18}/></span> devmate<span className="brand-dot">.</span></a>
+    <a className="brand" href="#"><span className="brand-mark"><Sparkles size={18}/></span> primemate<span className="brand-dot">.</span></a>
     <button className="mobile-menu" onClick={() => setOpen(!open)} aria-label="Toggle navigation">{open ? <X/> : <Menu/>}</button>
     <nav className={open ? "nav-links show" : "nav-links"}>
       <a href="#features" onClick={() => setOpen(false)}>Features</a>
       <a href="#workspace" onClick={() => setOpen(false)}>Workspace</a>
       <a href="#about" onClick={() => setOpen(false)}>About</a>
     </nav>
-    <a className="nav-cta" href="#workspace">Try DevMate <ArrowUpRight size={15}/></a>
+    <a className="nav-cta" href="#workspace">Try PrimeMate <ArrowUpRight size={15}/></a>
   </header>;
 }
 
@@ -44,7 +44,7 @@ function Hero() {
           <div className="line indent3"><b>07</b>madeWithCare /&gt;</div>
           <div className="line indent"><b>08</b>);</div>
           <div className="line"><b>09</b>{"}"}</div>
-          <div className="ai-tip"><span><Sparkles size={15}/></span><div><strong>DevMate suggestion</strong><small>Great interfaces start with clear components.</small></div><ArrowUpRight size={16}/></div>
+          <div className="ai-tip"><span><Sparkles size={15}/></span><div><strong>PrimeMate suggestion</strong><small>Great interfaces start with clear components.</small></div><ArrowUpRight size={16}/></div>
         </div>
       </div>
       <div className="floating-chip"><span className="chip-icon"><Zap size={16}/></span><div><strong>Build with confidence</strong><small>One step at a time</small></div></div>
@@ -157,13 +157,13 @@ Demo mode is active. Connect a backend API to enable live AI answers.`;
           <label htmlFor="prompt">Your frontend task</label>
           <textarea id="prompt" value={prompt} onChange={e => setPrompt(e.target.value)} placeholder="e.g. Help me build a responsive navigation bar in React..." rows="5" />
           <div className="form-bottom"><label htmlFor="level">Your experience</label><select id="level" value={level} onChange={e => setLevel(e.target.value)}><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
-          <button className="generate-btn" disabled={loading || !prompt.trim()}>{loading ? "Thinking..." : "Generate with DevMate"} <Sparkles size={17}/></button>
+          <button className="generate-btn" disabled={loading || !prompt.trim()}>{loading ? "Thinking..." : "Generate with PrimeMate"} <Sparkles size={17}/></button>
         </form>
         <div className="suggestions-title">NEED AN IDEA? TRY ONE</div>
         <div className="suggestion-list">{suggestions.map(item => <button key={item.title} className="suggestion" onClick={() => setPrompt(item.text)}><item.icon size={16}/><span>{item.title}</span><ArrowUpRight size={14}/></button>)}</div>
       </div>
       <div className="response-panel">
-        <div className="response-header"><div><span className="response-icon"><Sparkles size={17}/></span><div><strong>DevMate response</strong><small>Your AI-powered workspace</small></div></div>{mode && <span className="mode-badge">{mode === "live" ? "LIVE AI" : "DEMO MODE"}</span>}</div>
+        <div className="response-header"><div><span className="response-icon"><Sparkles size={17}/></span><div><strong>PrimeMate response</strong><small>Your AI-powered workspace</small></div></div>{mode && <span className="mode-badge">{mode === "live" ? "LIVE AI" : "DEMO MODE"}</span>}</div>
         <div className="response-body">
           {loading ? <div className="empty-state"><div className="loader"></div><h3>Thinking through your idea...</h3><p>Putting together a useful response.</p></div> :
            answer ? <>
@@ -199,8 +199,8 @@ function App() {
       <div className="feature-grid"><FeatureCard number="01" icon={Code2} title="Build with clarity" text="Turn rough ideas into structured React components and practical implementation steps."/><FeatureCard number="02" icon={WandSparkles} title="Learn as you go" text="Get explanations matched to your experience, from first steps to advanced patterns."/><FeatureCard number="03" icon={ShieldCheck} title="Think like a pro" text="Keep accessibility, responsive layouts, and maintainable code in your workflow."/></div>
     </section>
     <Workspace/>
-    <section className="closing" id="about"><div className="closing-icon"><Sparkles size={22}/></div><div><h2>Good code starts with a good question.</h2><p>Bring the idea. DevMate will help you find the next step.</p></div><a href="#workspace" className="primary-btn">Let's build <ArrowUpRight size={16}/></a></section>
-  </main><footer><a className="brand" href="#"><span className="brand-mark"><Sparkles size={16}/></span> devmate<span className="brand-dot">.</span></a><span>© 2026 DevMate. Built for the next generation of creators.</span><a href="#workspace"><Github size={16}/> Keep building</a></footer></div>;
+    <section className="closing" id="about"><div className="closing-icon"><Sparkles size={22}/></div><div><h2>Good code starts with a good question.</h2><p>Bring the idea. PrimeMate will help you find the next step.</p></div><a href="#workspace" className="primary-btn">Let's build <ArrowUpRight size={16}/></a></section>
+  </main><footer><a className="brand" href="#"><span className="brand-mark"><Sparkles size={16}/></span> primemate<span className="brand-dot">.</span></a><span>© 2026 PrimeMate. Built for the next generation of creators.</span><a href="#workspace"><Github size={16}/> Keep building</a></footer></div>;
 }
 
 export default App;

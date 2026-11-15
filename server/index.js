@@ -48,7 +48,7 @@ app.post("/api/generate", async (req, res) => {
     const response = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-        { role: "system", content: "You are DevMate, a practical senior frontend mentor. Give accurate, concise, production-minded React, JavaScript, HTML and CSS guidance. Explain code clearly. Mention accessibility and responsive design where relevant." },
+        { role: "system", content: "You are PrimeMate, a practical senior frontend mentor. Give accurate, concise, production-minded React, JavaScript, HTML and CSS guidance. Explain code clearly. Mention accessibility and responsive design where relevant." },
         { role: "user", content: `My experience level is ${skillLevel}. Help me with this frontend task: ${prompt}` }
       ],
       temperature: 0.6
@@ -61,4 +61,4 @@ app.post("/api/generate", async (req, res) => {
 });
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`DevMate API running at http://localhost:${port}`));
+app.listen(port, () => console.log(`PrimeMate API running at http://localhost:${port}`));
