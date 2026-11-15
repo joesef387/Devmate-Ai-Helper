@@ -10,7 +10,7 @@ const suggestions = [
 function Navbar() {
   const [open, setOpen] = useState(false);
   return <header className="navbar">
-    <a className="brand" href="#"><span className="brand-mark"><Sparkles size={18}/></span> primemate<span className="brand-dot">.</span></a>
+    <a className="brand" href="#"><span className="brand-mark"><Sparkles size={18}/></span> PrimeMate<span className="brand-dot">.</span></a>
     <button className="mobile-menu" onClick={() => setOpen(!open)} aria-label="Toggle navigation">{open ? <X/> : <Menu/>}</button>
     <nav className={open ? "nav-links show" : "nav-links"}>
       <a href="#features" onClick={() => setOpen(false)}>Features</a>
@@ -200,7 +200,7 @@ function App() {
     </section>
     <Workspace/>
     <section className="closing" id="about"><div className="closing-icon"><Sparkles size={22}/></div><div><h2>Good code starts with a good question.</h2><p>Bring the idea. PrimeMate will help you find the next step.</p></div><a href="#workspace" className="primary-btn">Let's build <ArrowUpRight size={16}/></a></section>
-  </main><footer><a className="brand" href="#"><span className="brand-mark"><Sparkles size={16}/></span> primemate<span className="brand-dot">.</span></a><span>© 2026 PrimeMate. Built for the next generation of creators.</span><a href="#workspace"><Github size={16}/> Keep building</a></footer></div>;
+  </main><footer><a className="brand" href="#"><span className="brand-mark"><Sparkles size={16}/></span> PrimeMate<span className="brand-dot">.</span></a><span>© 2026 PrimeMate. Built for the next generation of creators.</span><a href="#workspace"><Github size={16}/> Keep building</a></footer></div>;
 }
 
 export default App;
